@@ -45,7 +45,9 @@ class NasabahResource extends Resource
 
                 DatePicker::make('tgl_daftar')
                     ->label('Tanggal Daftar')
-                    ->required(),
+                    ->required()
+                    ->default(now()),
+                   
             ]);
     }
 

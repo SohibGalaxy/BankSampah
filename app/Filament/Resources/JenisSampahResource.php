@@ -28,7 +28,11 @@ class JenisSampahResource extends Resource
                  TextInput::make('nama')
                 ->label('Nama Sampah')
                 ->required()
-                ->maxLength(100),
+                ->maxLength(100)
+                ->unique(ignoreRecord: true) // ⬅️ ini yang ditambahkan
+                ->validationMessages([
+                    'unique' => 'Jenis sampah ini sudah ada.', // ⬅️ custom pesan
+                ]),
 
                 TextInput::make('harga_per_kg')
                     ->label('Harga per Kg')

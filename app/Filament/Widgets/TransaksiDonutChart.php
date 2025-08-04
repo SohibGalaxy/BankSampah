@@ -9,7 +9,9 @@ class TransaksiDonutChart extends ChartWidget
 {
     protected static ?string $heading = 'Persentase Transaksi Masuk dan Keluar';
      protected static ?int $sort = 2;
-    protected static ?string $maxHeight = '273px';
+    
+
+    protected static ?string $maxHeight = '275px';
 
     protected function getData(): array
     {

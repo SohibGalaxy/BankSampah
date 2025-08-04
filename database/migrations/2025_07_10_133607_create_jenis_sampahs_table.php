@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jenis_sampahs', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama')->unique();
             $table->decimal('harga_per_kg', 10, 2);
             $table->timestamps();
         });
